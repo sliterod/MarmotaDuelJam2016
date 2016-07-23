@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 93621cbe7feb318429041e98eb6e9b76
-timeCreated: 1469290798
+timeCreated: 1469305511
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,40 @@ TextureImporter:
     21300020: spikes_0
     21300022: spikes_1
     21300024: spikes_2
+    21300026: hole_0
+    21300028: hole_1
+    21300030: detail_0
+    21300032: detail_1
+    21300034: detail_2
+    21300036: paint_1
+    21300038: painting_1
+    21300040: painting_2
+    21300042: wall_0
+    21300044: tile_2
+    21300046: spike_0
+    21300048: spike_1
+    21300050: spike_2
+    21300052: angel_0
+    21300054: angel_1
+    21300056: door_true
+    21300058: door_fake
+    21300060: crack
+    21300062: floor_mark_0
+    21300064: floor_mark_1
+    21300066: floor_mark_2
+    21300068: guillotine_0
+    21300070: guillotine_1
+    21300072: guillotine_stand_0
+    21300074: guillotine_stand_1
+    21300076: angel_2
+    21300078: angel_3
+    21300080: floor_beggining
+    21300082: floor_upper_0
+    21300084: floor_upper_1
+    21300086: floor_upper_end
+    21300088: tile_border
+    21300090: tile_borderless
+    21300092: sphere
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -109,7 +143,7 @@ TextureImporter:
         - {x: -14, y: 13}
         - {x: -16, y: 15}
         - {x: -25, y: 15}
-    - name: pit_0
+    - name: hole_0
       rect:
         serializedVersion: 2
         x: 150
@@ -125,7 +159,7 @@ TextureImporter:
         - {x: 25, y: -25}
         - {x: 25, y: 13}
         - {x: -16, y: 15}
-    - name: pit_1
+    - name: hole_1
       rect:
         serializedVersion: 2
         x: 200
@@ -141,7 +175,125 @@ TextureImporter:
         - {x: 25, y: -25}
         - {x: 25, y: 15}
         - {x: -17, y: 15}
-    - name: wall_1
+    - name: detail_0
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: -1}
+        - {x: -17, y: -3}
+        - {x: -8, y: -12}
+        - {x: 7, y: -12}
+        - {x: 15, y: -9}
+        - {x: 15, y: 2}
+        - {x: 10, y: 8}
+        - {x: 3, y: 14}
+        - {x: -5, y: 14}
+        - {x: -18, y: 2}
+    - name: detail_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -12}
+        - {x: -18, y: -13}
+        - {x: -18, y: -15}
+        - {x: -16, y: -17}
+        - {x: -2, y: -17}
+        - {x: 0, y: -15}
+        - {x: -1, y: -12}
+      - - {x: 6, y: 18}
+        - {x: -6, y: 18}
+        - {x: -21, y: 9}
+        - {x: -21, y: 4}
+        - {x: -5, y: -8}
+        - {x: 3, y: -8}
+        - {x: 19, y: -1}
+        - {x: 19, y: 3}
+        - {x: 12, y: 5}
+    - name: detail_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 21}
+        - {x: -18, y: 21}
+        - {x: -18, y: -17}
+        - {x: 3, y: -17}
+        - {x: 18, y: 1}
+        - {x: 18, y: 4}
+        - {x: 15, y: 5}
+        - {x: 2, y: 19}
+    - name: paint_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 21}
+        - {x: -11, y: -16}
+        - {x: -9, y: -18}
+        - {x: 11, y: -18}
+        - {x: 13, y: -17}
+        - {x: 13, y: 21}
+    - name: painting_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 17}
+        - {x: -17, y: -18}
+        - {x: -15, y: -20}
+        - {x: 25, y: -20}
+        - {x: 25, y: 19}
+        - {x: -15, y: 19}
+    - name: painting_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 19}
+        - {x: -25, y: -20}
+        - {x: 15, y: -20}
+        - {x: 17, y: -18}
+        - {x: 17, y: 17}
+        - {x: 15, y: 19}
+    - name: wall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -156,7 +308,7 @@ TextureImporter:
         - {x: 25, y: -25}
         - {x: 25, y: 19}
         - {x: -25, y: 19}
-    - name: wall_2
+    - name: wall_1
       rect:
         serializedVersion: 2
         x: 50
@@ -187,7 +339,7 @@ TextureImporter:
         - {x: -14, y: 17}
         - {x: -16, y: 19}
         - {x: -25, y: 19}
-    - name: tile_0
+    - name: tile_1
       rect:
         serializedVersion: 2
         x: 150
@@ -202,7 +354,7 @@ TextureImporter:
         - {x: 25, y: 1}
         - {x: 25, y: 15}
         - {x: -25, y: 15}
-    - name: tile_1
+    - name: tile_2
       rect:
         serializedVersion: 2
         x: 200
@@ -217,7 +369,7 @@ TextureImporter:
         - {x: 25, y: 1}
         - {x: 25, y: 15}
         - {x: -25, y: 15}
-    - name: spikes_0
+    - name: spike_0
       rect:
         serializedVersion: 2
         x: 250
@@ -252,7 +404,7 @@ TextureImporter:
         - {x: 10, y: -21}
         - {x: 10, y: -17}
         - {x: 6, y: -14}
-    - name: spikes_1
+    - name: spike_1
       rect:
         serializedVersion: 2
         x: 300
@@ -271,7 +423,7 @@ TextureImporter:
         - {x: -17, y: -25}
         - {x: 19, y: -25}
         - {x: 19, y: 7}
-    - name: spikes_2
+    - name: spike_2
       rect:
         serializedVersion: 2
         x: 350
@@ -291,6 +443,396 @@ TextureImporter:
         - {x: 24, y: -24}
         - {x: 24, y: -18}
         - {x: 22, y: -8}
+    - name: angel_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 924
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 17}
+        - {x: 4, y: 21}
+        - {x: -11, y: 21}
+        - {x: -13, y: 15}
+        - {x: -13, y: -10}
+        - {x: -5, y: -19}
+        - {x: 11, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 21}
+        - {x: 24, y: 21}
+    - name: angel_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 924
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 21}
+        - {x: -25, y: -25}
+        - {x: 13, y: -25}
+        - {x: 13, y: 18}
+        - {x: 10, y: 21}
+    - name: door_true
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 924
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 25}
+        - {x: 10, y: 22}
+        - {x: 10, y: -18}
+        - {x: 19, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 25}
+    - name: door_fake
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 924
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 25}
+        - {x: 10, y: 22}
+        - {x: 10, y: -18}
+        - {x: 19, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 25}
+    - name: crack
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: -13}
+        - {x: -25, y: -19}
+        - {x: -25, y: -25}
+        - {x: -5, y: -25}
+        - {x: -2, y: -21}
+        - {x: -2, y: -13}
+      - - {x: 0, y: -13}
+        - {x: -3, y: -16}
+        - {x: -3, y: -25}
+        - {x: 18, y: -25}
+        - {x: 23, y: -21}
+        - {x: 24, y: -16}
+        - {x: 22, y: -13}
+    - name: floor_mark_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: -24}
+        - {x: 1, y: -24}
+        - {x: 7, y: -21}
+        - {x: 7, y: -14}
+        - {x: -11, y: -14}
+        - {x: -11, y: -21}
+    - name: floor_mark_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: -13}
+        - {x: -11, y: -15}
+        - {x: -12, y: -17}
+        - {x: -12, y: -21}
+        - {x: -7, y: -25}
+        - {x: 2, y: -25}
+        - {x: 7, y: -23}
+        - {x: 8, y: -21}
+        - {x: 8, y: -17}
+        - {x: 3, y: -13}
+    - name: floor_mark_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -12}
+        - {x: -9, y: -14}
+        - {x: -13, y: -18}
+        - {x: -13, y: -22}
+        - {x: -8, y: -25}
+        - {x: 3, y: -25}
+        - {x: 9, y: -22}
+        - {x: 9, y: -19}
+        - {x: 5, y: -12}
+    - name: guillotine_0
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 16}
+        - {x: -7, y: 6}
+        - {x: -7, y: -16}
+        - {x: -5, y: -18}
+        - {x: -4, y: -18}
+        - {x: 6, y: -8}
+        - {x: 6, y: 14}
+        - {x: 4, y: 16}
+    - name: guillotine_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 16}
+        - {x: -7, y: 6}
+        - {x: -7, y: -16}
+        - {x: -5, y: -18}
+        - {x: -4, y: -18}
+        - {x: 6, y: -8}
+        - {x: 6, y: 14}
+        - {x: 4, y: 16}
+    - name: guillotine_stand_0
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: -25}
+        - {x: -3, y: -25}
+        - {x: -3, y: 6}
+        - {x: -5, y: 8}
+        - {x: -8, y: 7}
+      - - {x: 2, y: -25}
+        - {x: 7, y: -25}
+        - {x: 7, y: 15}
+        - {x: 5, y: 17}
+        - {x: 2, y: 16}
+    - name: guillotine_stand_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 25}
+        - {x: -8, y: -25}
+        - {x: -2, y: -25}
+        - {x: 7, y: -18}
+        - {x: 7, y: 25}
+    - name: angel_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 11}
+        - {x: 5, y: 2}
+        - {x: 18, y: -12}
+        - {x: 25, y: -12}
+        - {x: 25, y: 2}
+        - {x: 11, y: 11}
+      - - {x: 11, y: 25}
+        - {x: 11, y: 19}
+        - {x: 15, y: 10}
+        - {x: 21, y: 8}
+        - {x: 25, y: 8}
+        - {x: 25, y: 25}
+    - name: angel_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 874
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 25}
+        - {x: -25, y: 6}
+        - {x: -25, y: -14}
+        - {x: -4, y: -14}
+        - {x: 8, y: -9}
+        - {x: 11, y: -1}
+        - {x: 11, y: 10}
+        - {x: -1, y: 25}
+      - - {x: -25, y: 25}
+        - {x: -25, y: 8}
+        - {x: -21, y: 8}
+        - {x: -11, y: 18}
+        - {x: -11, y: 25}
+    - name: floor_beggining
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 8}
+        - {x: -25, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 15}
+        - {x: -17, y: 15}
+    - name: floor_upper_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 19}
+        - {x: -25, y: 19}
+    - name: floor_upper_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: -25}
+        - {x: 25, y: -25}
+        - {x: 25, y: 19}
+        - {x: -25, y: 19}
+    - name: floor_upper_end
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 19}
+        - {x: -25, y: -25}
+        - {x: -22, y: -25}
+        - {x: -14, y: -17}
+        - {x: -14, y: 17}
+        - {x: -16, y: 19}
+    - name: tile_border
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: -1}
+        - {x: -20, y: -1}
+        - {x: -14, y: 6}
+        - {x: -14, y: 11}
+        - {x: -16, y: 13}
+        - {x: -25, y: 13}
+    - name: tile_borderless
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 5}
+        - {x: -25, y: -1}
+        - {x: 25, y: -1}
+        - {x: 25, y: 13}
+        - {x: -17, y: 13}
+    - name: sphere
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 824
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 21}
+        - {x: -21, y: 21}
+        - {x: -21, y: -22}
+        - {x: 5, y: -22}
+        - {x: 19, y: -16}
+        - {x: 20, y: -11}
+        - {x: 20, y: 11}
+        - {x: 19, y: 15}
     outline: []
   spritePackingTag: 
   userData: 
