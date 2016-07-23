@@ -5,12 +5,15 @@ public class ColliderEvents : MonoBehaviour {
 
     CharacterAction characterAction;
     CamZoom cameraZoom;
+    Animator animator;
 
     bool isCharacterJumping;
 
     void Start() {
         characterAction = this.GetComponent<CharacterAction>();
         cameraZoom = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CamZoom>();
+    
+        animator = this.GetComponent<Animator>();
     }
     
     void OnTriggerEnter2D(Collider2D triggerCollider) {
@@ -20,6 +23,8 @@ public class ColliderEvents : MonoBehaviour {
             Debug.Log("Send message to jump method");
             characterAction.isJumping = true;
             isCharacterJumping = true;
+            
+            animator.SetTrigger("isJumping");
         }
 
         if (triggerCollider.tag == "hazard")
