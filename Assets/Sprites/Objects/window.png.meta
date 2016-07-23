@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 28d54b1133f9095449deefc9a3a2ae7f
-timeCreated: 1469289478
+guid: 98b234ab433f29e46b0d13f56db573b2
+timeCreated: 1469310515
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: StageSpriteSheetladder_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,7 +38,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,18 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: StageSpriteSheetladder_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 979
-        width: 30
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
