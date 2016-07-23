@@ -43,6 +43,7 @@ public class RoomController : MonoBehaviour{
     /// </summary>
     void HideHints() {
         Debug.Log("Difficulty set on Insane. Hiding all hints");
+        //this.transform.FindChild("Helpers").gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -50,6 +51,7 @@ public class RoomController : MonoBehaviour{
     /// </summary>
     void ShowHints (){
         Debug.Log("Difficulty set on Easy. Showing all hints");
+        //this.transform.FindChild("Helpers").gameObject.SetActive(true);
     }
 
     /// <summary>
