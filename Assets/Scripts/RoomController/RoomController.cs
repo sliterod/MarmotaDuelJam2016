@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RoomController{
+public class RoomController : MonoBehaviour{
 
     bool hintActivatedAfterDeath;
 
