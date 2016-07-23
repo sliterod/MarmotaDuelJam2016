@@ -13,7 +13,7 @@ public class Respawn : MonoBehaviour {
     /// <summary>
     /// Sets the character on the initial position
     /// </summary>
-    void RespawnCharacter() {
+    public void RespawnCharacter() {
         character.position = characterInitialPosition;
     }
 }

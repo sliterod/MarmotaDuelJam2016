@@ -25,7 +25,7 @@ public class ColliderEvents : MonoBehaviour {
         if (triggerCollider.tag == "hazard")
         {
             Debug.Log("Hazard! Restarting game");
-            GameObject.Find("Gamestate").SendMessage("RespawnCharacter");
+            GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.message);
         }
 
         if (triggerCollider.tag == "climb")
