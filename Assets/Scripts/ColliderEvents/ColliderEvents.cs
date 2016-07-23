@@ -12,7 +12,7 @@ public class ColliderEvents : MonoBehaviour {
         characterAction = this.GetComponent<CharacterAction>();
         cameraZoom = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CamZoom>();
     }
-
+    
     void OnTriggerEnter2D(Collider2D triggerCollider) {
         
         if (triggerCollider.tag == "jump" && !isCharacterJumping)
