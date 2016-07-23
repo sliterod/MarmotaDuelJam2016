@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 97c3ec0851cc74b40aa5ef98650744c9
-timeCreated: 1469289360
+timeCreated: 1469299809
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,69 +59,123 @@ TextureImporter:
     - name: StageSpriteSheet_Levers_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 993
-        width: 17
-        height: 12
+        x: 0
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 10, y: 4}
+        - {x: 10, y: 7}
+        - {x: 8, y: 8}
+        - {x: 3, y: 8}
+        - {x: -9, y: 0}
+        - {x: -11, y: -4}
+        - {x: -11, y: -7}
+        - {x: -9, y: -8}
+        - {x: 7, y: -8}
+        - {x: 9, y: -6}
+        - {x: 9, y: -4}
+        - {x: 7, y: -1}
     - name: StageSpriteSheet_Levers_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 993
-        width: 16
-        height: 18
+        x: 50
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -10, y: -4}
+        - {x: -10, y: -7}
+        - {x: -8, y: -8}
+        - {x: 10, y: -8}
+        - {x: 10, y: 8}
+        - {x: 9, y: 14}
+        - {x: -2, y: 14}
+        - {x: -9, y: 0}
     - name: StageSpriteSheet_Levers_2
       rect:
         serializedVersion: 2
-        x: 117
-        y: 993
-        width: 16
-        height: 12
+        x: 100
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -4, y: 8}
+        - {x: -10, y: 8}
+        - {x: -10, y: -8}
+        - {x: 8, y: -8}
+        - {x: 10, y: -7}
+        - {x: 10, y: -4}
+        - {x: 8, y: 0}
     - name: StageSpriteSheet_Levers_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 943
-        width: 17
-        height: 12
+        x: 0
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 10, y: 4}
+        - {x: 10, y: 7}
+        - {x: 8, y: 8}
+        - {x: 3, y: 8}
+        - {x: -9, y: 0}
+        - {x: -11, y: -4}
+        - {x: -11, y: -7}
+        - {x: -9, y: -8}
+        - {x: 7, y: -8}
+        - {x: 9, y: -6}
+        - {x: 9, y: -4}
+        - {x: 7, y: -1}
     - name: StageSpriteSheet_Levers_4
       rect:
         serializedVersion: 2
-        x: 67
-        y: 943
-        width: 16
-        height: 18
+        x: 50
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -10, y: -4}
+        - {x: -10, y: -7}
+        - {x: -8, y: -8}
+        - {x: 10, y: -8}
+        - {x: 10, y: 8}
+        - {x: 9, y: 14}
+        - {x: -2, y: 14}
+        - {x: -9, y: 0}
     - name: StageSpriteSheet_Levers_5
       rect:
         serializedVersion: 2
-        x: 117
-        y: 943
-        width: 16
-        height: 12
+        x: 100
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -4, y: 8}
+        - {x: -10, y: 8}
+        - {x: -10, y: -8}
+        - {x: 8, y: -8}
+        - {x: 10, y: -7}
+        - {x: 10, y: -4}
+        - {x: 8, y: 0}
     outline: []
   spritePackingTag: 
   userData: 
