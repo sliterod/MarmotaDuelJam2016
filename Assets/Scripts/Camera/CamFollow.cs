@@ -34,7 +34,7 @@ public class CamFollow : MonoBehaviour {
 
         if (camPosX <= 0.0f)
         {
-            addedPosX = 2.5f;
+            addedPosX = 1.5f;
         }
         else {
             addedPosX = camPosX;
