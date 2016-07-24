@@ -32,7 +32,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomEasy()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Easy1");
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomNormal()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Normal1");
     }
 
     /// <summary>

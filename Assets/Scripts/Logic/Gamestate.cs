@@ -381,7 +381,7 @@ public class Gamestate : MonoBehaviour {
     /// Loads main menu
     /// </summary>
     void LoadMainMenu() {
-        lifeController.LifeAmount = 9;
+        Destroy(GameObject.Find("Loader"));
         SceneManager.LoadScene("menu");
     }
 
