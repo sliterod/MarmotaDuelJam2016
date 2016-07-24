@@ -94,6 +94,14 @@ public class ColliderEvents : MonoBehaviour {
 
             GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.victory);
         }
+
+        if (triggerCollider.tag == "fakeDoor")
+        {
+            Debug.Log("Game over, try again");
+            this.GetComponent<CharacterMovement>().IsCharacterMoving = false;
+
+            GameObject.Find("Gamestate").SendMessage("ActivateBeastDoor", triggerCollider.transform);
+        }
     }
 
     void OnTriggerExit2D(Collider2D triggerCollider)
@@ -112,11 +120,6 @@ public class ColliderEvents : MonoBehaviour {
             GameObject.Find("Gamestate").SendMessage("DeactivateClimb");
             isCharacterClimbing = false;
         }
-
-        if (triggerCollider.tag == "fakeDoor") {
-            Debug.Log("Game over, try again");
-        }
-
         
     }
 

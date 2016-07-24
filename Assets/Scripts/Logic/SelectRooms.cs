@@ -46,7 +46,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomInsane()
     {
-        SceneManager.LoadScene("Hard1");
+        SceneManager.LoadScene("Insane");
     }
 
     /// <summary>

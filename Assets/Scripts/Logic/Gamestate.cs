@@ -429,7 +429,7 @@ public class Gamestate : MonoBehaviour {
 
         if (selectRooms.CurrentDifficulty == Difficulty.insane)
         {
-            SceneManager.LoadScene("Hard1");
+            SceneManager.LoadScene("Insane");
         }
     }
 
