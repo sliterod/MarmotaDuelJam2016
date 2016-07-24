@@ -52,6 +52,12 @@ public class CharacterAction : MonoBehaviour {
     /// Makes the character climb
     /// </summary>
     void Climb() {
+        if (isJumping)
+        {
+            isJumping = false;
+            
+        }
+        
         float yPosition = this.transform.position.y;
 
         this.transform.position = new Vector3(  this.transform.position.x,

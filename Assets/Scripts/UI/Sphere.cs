@@ -11,6 +11,7 @@ public class Sphere : MonoBehaviour {
     /// Drops the ball on the player
     /// </summary>
     void DropBall() {
+        this.GetComponent<BoxCollider2D>().enabled = true;
         this.GetComponent<Rigidbody2D>().isKinematic = false;
     }
 

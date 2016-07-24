@@ -231,7 +231,7 @@ public class Gamestate : MonoBehaviour {
         yield return new WaitForSeconds(0.05f);
 
         //Sprite
-        sphere.gameObject.SendMessage("DropBall");
+        //sphere.gameObject.SendMessage("DropBall");
 
         //Change sprite
         character.GetComponent<SpriteRenderer>().enabled = false;
