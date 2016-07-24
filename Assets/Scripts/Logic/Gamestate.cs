@@ -30,15 +30,6 @@ public class Gamestate : MonoBehaviour {
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
 
         ChangeCurrentState(CurrentState.ingame);
-
-        if (selectRooms.CurrentDifficulty == Difficulty.easy ||
-            selectRooms.CurrentDifficulty == Difficulty.normal)
-        {
-            if (PlayerPrefs.GetInt("messageShown", 0) == 0) {
-                PlayerPrefs.SetInt("messageShown", 1);
-                GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
-            }
-        }
     }
 
     /// <summary>
