@@ -3,17 +3,19 @@ using System.Collections;
 
 public class Sphere : MonoBehaviour {
 
-    public Transform ball;
+    public GameObject ball;
+    public GameObject particles;
+    public GameObject sprite;
 
     /// <summary>
     /// Drops the ball on the player
     /// </summary>
     void DropBall() {
-        ball.localPosition = new Vector2(0.0f, -0.59f);
+        this.GetComponent<Rigidbody2D>().isKinematic = false;
     }
 
     void ResetSphere() {
-        ball.localPosition = new Vector2(0.0f, 0.0f);
+        
     }
 
     /// <summary>
@@ -21,7 +23,15 @@ public class Sphere : MonoBehaviour {
     /// </summary>
     void DisableHazard()
     {
-        Debug.Log("Hazard disabled");
-        ball.localPosition = new Vector2(0.0f, 1.20f);
+
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        this.GetComponent<Rigidbody2D>().isKinematic = true;
+        this.GetComponent<BoxCollider2D>().enabled = false;
+        sprite.SetActive(false);
+        particles.SetActive(true);
+    }
+
 }
