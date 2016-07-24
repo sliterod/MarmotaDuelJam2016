@@ -13,7 +13,13 @@ public class MessageUI : MonoBehaviour {
         message.SetActive(state);
     }
 
-    
+    /// <summary>
+    /// Activates game over message
+    /// </summary>
+    public void ActivateGameOverMessage() {
+        Debug.Log("Game over message");
+    }
+
     public void SetMessage() {
 
     }
