@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 81bce5931133efb46ad7bb90901f7bd4
-timeCreated: 1469289448
+timeCreated: 1469326456
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -66,146 +66,264 @@ TextureImporter:
     - name: StageSpriteSheet_Torches_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 989
-        width: 15
-        height: 20
+        x: 0
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1, y: 12}
+        - {x: -4, y: 12}
+        - {x: -10, y: 2}
+        - {x: -10, y: -8}
+        - {x: -2, y: -12}
+        - {x: 4, y: -12}
+        - {x: 9, y: -5}
+        - {x: 9, y: 3}
+        - {x: 6, y: 8}
     - name: StageSpriteSheet_Torches_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 989
-        width: 15
-        height: 20
+        x: 50
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 12}
+        - {x: -4, y: 12}
+        - {x: -6, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -12}
+        - {x: 1, y: -12}
+        - {x: 7, y: -7}
+        - {x: 9, y: -3}
+        - {x: 9, y: 0}
     - name: StageSpriteSheet_Torches_2
       rect:
         serializedVersion: 2
-        x: 117
-        y: 989
-        width: 15
-        height: 20
+        x: 100
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -1, y: 12}
+        - {x: -6, y: 7}
+        - {x: -10, y: 1}
+        - {x: -10, y: -4}
+        - {x: -5, y: -12}
+        - {x: 1, y: -12}
+        - {x: 8, y: -8}
+        - {x: 9, y: -3}
+        - {x: 9, y: -2}
+        - {x: 2, y: 12}
     - name: StageSpriteSheet_Torches_3
       rect:
         serializedVersion: 2
-        x: 167
-        y: 989
-        width: 15
-        height: 20
+        x: 150
+        y: 974
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 12}
+        - {x: -3, y: 12}
+        - {x: -10, y: 2}
+        - {x: -10, y: -8}
+        - {x: -3, y: -12}
+        - {x: 4, y: -12}
+        - {x: 9, y: -2}
+        - {x: 9, y: -1}
+        - {x: 6, y: 10}
     - name: StageSpriteSheet_Torches_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 939
-        width: 13
-        height: 20
+        x: 0
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1, y: 12}
+        - {x: -2, y: 12}
+        - {x: -6, y: 10}
+        - {x: -9, y: 4}
+        - {x: -9, y: -3}
+        - {x: -6, y: -9}
+        - {x: -1, y: -12}
+        - {x: 2, y: -12}
+        - {x: 8, y: -6}
+        - {x: 8, y: 1}
+        - {x: 5, y: 8}
     - name: StageSpriteSheet_Torches_5
       rect:
         serializedVersion: 2
-        x: 68
-        y: 939
-        width: 13
-        height: 16
+        x: 50
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -2, y: 8}
+        - {x: -9, y: 1}
+        - {x: -9, y: -3}
+        - {x: -6, y: -9}
+        - {x: -2, y: -12}
+        - {x: 3, y: -12}
+        - {x: 8, y: -7}
+        - {x: 8, y: 0}
+        - {x: 3, y: 8}
     - name: StageSpriteSheet_Torches_6
       rect:
         serializedVersion: 2
-        x: 118
-        y: 939
-        width: 13
-        height: 10
+        x: 100
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 6, y: 2}
+        - {x: -7, y: 2}
+        - {x: -9, y: 1}
+        - {x: -9, y: -3}
+        - {x: -6, y: -10}
+        - {x: -2, y: -12}
+        - {x: 2, y: -12}
+        - {x: 8, y: -5}
+        - {x: 8, y: -1}
     - name: StageSpriteSheet_Torches_7
       rect:
         serializedVersion: 2
-        x: 169
-        y: 941
-        width: 11
-        height: 11
+        x: 150
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1, y: 5}
+        - {x: -8, y: -2}
+        - {x: -8, y: -6}
+        - {x: -6, y: -10}
+        - {x: 7, y: -10}
+        - {x: 7, y: 2}
+        - {x: 6, y: 5}
     - name: StageSpriteSheet_Torches_8
       rect:
         serializedVersion: 2
-        x: 220
-        y: 940
-        width: 10
-        height: 13
+        x: 200
+        y: 924
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -4, y: 6}
+        - {x: -7, y: 5}
+        - {x: -7, y: -8}
+        - {x: -4, y: -11}
+        - {x: 0, y: -11}
+        - {x: 7, y: -4}
+        - {x: 7, y: 0}
+        - {x: 1, y: 6}
     - name: StageSpriteSheet_Torches_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 889
-        width: 13
-        height: 20
+        x: 0
+        y: 874
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1, y: 12}
+        - {x: -4, y: 12}
+        - {x: -9, y: 4}
+        - {x: -9, y: -8}
+        - {x: -3, y: -12}
+        - {x: 3, y: -12}
+        - {x: 8, y: -6}
+        - {x: 8, y: 0}
+        - {x: 5, y: 8}
     - name: StageSpriteSheet_Torches_10
       rect:
         serializedVersion: 2
-        x: 68
-        y: 889
-        width: 13
-        height: 20
+        x: 50
+        y: 874
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1, y: 12}
+        - {x: -2, y: 12}
+        - {x: -6, y: 10}
+        - {x: -9, y: 4}
+        - {x: -9, y: -3}
+        - {x: -6, y: -9}
+        - {x: -1, y: -12}
+        - {x: 2, y: -12}
+        - {x: 8, y: -6}
+        - {x: 8, y: 1}
+        - {x: 5, y: 8}
     - name: StageSpriteSheet_Torches_11
       rect:
         serializedVersion: 2
-        x: 118
-        y: 889
-        width: 13
-        height: 20
+        x: 100
+        y: 874
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -1, y: 12}
+        - {x: -8, y: 9}
+        - {x: -9, y: 3}
+        - {x: -9, y: -6}
+        - {x: -1, y: -12}
+        - {x: 2, y: -12}
+        - {x: 8, y: -5}
+        - {x: 8, y: 1}
+        - {x: 1, y: 12}
     - name: StageSpriteSheet_Torches_12
       rect:
         serializedVersion: 2
-        x: 168
-        y: 889
-        width: 13
-        height: 20
+        x: 150
+        y: 874
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 5, y: 10}
+        - {x: 3, y: 12}
+        - {x: -9, y: 12}
+        - {x: -9, y: -12}
+        - {x: 2, y: -12}
+        - {x: 8, y: -5}
+        - {x: 8, y: -1}
     outline: []
   spritePackingTag: 
   userData: 

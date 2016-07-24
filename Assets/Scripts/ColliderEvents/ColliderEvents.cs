@@ -55,6 +55,13 @@ public class ColliderEvents : MonoBehaviour {
             Debug.Log("Guillotine triggered, activate flash");
             GameObject.Find("Gamestate").SendMessage("ActivateGuillotine");
         }
+
+        if (triggerCollider.tag == "floorButton")
+        {
+            Debug.Log("FloorButton touched, activating animation");
+            Animator floorAnimator = GameObject.FindGameObjectWithTag("floorButton").GetComponent<Animator>();
+            floorAnimator.SetBool("isPlaying", true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D triggerCollider)

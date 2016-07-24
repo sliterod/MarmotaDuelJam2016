@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClickEvents : MonoBehaviour {
+public class TorchEvent : MonoBehaviour {
 
     public BoxCollider2D affectedObject;
 
-    void OnMouseDown() {      
-        if (Input.GetMouseButtonDown(0)) {
+    bool isTorchOff;    //Check if torch is off
+    bool isTorchFlip;   //Check if torch is flipped
+
+    void OnMouseDown()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
             Debug.Log("Click on element");
 
             PlayAnimation();
@@ -16,22 +21,26 @@ public class ClickEvents : MonoBehaviour {
     /// <summary>
     /// Deactivates hazard associated to this object
     /// </summary>
-    void DeactivateHazard() {
-        if (affectedObject) { 
+    void DeactivateHazard()
+    {
+        if (affectedObject)
+        {
             affectedObject.enabled = false;
-            affectedObject.SendMessage("DisableHazard",SendMessageOptions.DontRequireReceiver);
+            affectedObject.SendMessage("DisableHazard", SendMessageOptions.DontRequireReceiver);
         }
     }
 
     /// <summary>
     /// Plays object animation
     /// </summary>
-    void PlayAnimation() {
+    void PlayAnimation()
+    {
         Animator animator;
         animator = this.GetComponent<Animator>();
 
-        animator.SetBool("isPlaying", true);
+        animator.SetTrigger("turnOff");
 
         DeactivateHazard();
     }
+
 }
