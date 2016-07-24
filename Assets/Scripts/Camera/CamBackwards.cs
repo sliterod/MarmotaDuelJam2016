@@ -50,8 +50,6 @@ public class CamBackwards : MonoBehaviour {
     /// Allows player to see hints
     /// </summary>
     void MoveCameraBackwards() {
-        Debug.Log("CamPos: " + this.transform.position.x);
-
         if (this.transform.position.x > newDelta)
         {
             this.transform.position = new Vector3(this.transform.position.x - 0.02f,

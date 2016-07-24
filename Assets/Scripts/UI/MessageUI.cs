@@ -20,7 +20,10 @@ public class MessageUI : MonoBehaviour {
         Debug.Log("Game over message");
     }
 
-    public void SetMessage() {
-
+    /// <summary>
+    /// Activates Win Message
+    /// </summary>
+    public void ActivateWinMessage() {
+        Debug.Log("Win message");
     }
 }

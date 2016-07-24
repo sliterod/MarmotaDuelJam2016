@@ -19,6 +19,6 @@ public class Lives : MonoBehaviour {
     }
 
     void Awake() {
-        LifeAmount = 9;
+        LifeAmount = 1;
     }
 }

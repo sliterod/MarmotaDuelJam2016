@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Gamestate : MonoBehaviour {
 
@@ -9,8 +10,9 @@ public class Gamestate : MonoBehaviour {
     Animator animator;
     GameObject character;
     GameObject[] loadedRooms;
+    Lives lifeController;
 
-    public int lives;
+    int lives;
 
     // Use this for initialization
     void Start() {
@@ -20,6 +22,8 @@ public class Gamestate : MonoBehaviour {
         characterMovement = character.GetComponent<CharacterMovement>();
         characterRigidbody = character.GetComponent<Rigidbody2D>();
         animator = character.GetComponent<Animator>();
+        lifeController = GameObject.Find("Loader").GetComponent<Lives>();
+        lives = lifeController.LifeAmount;
 
         ChangeCurrentState(CurrentState.ingame);
     }
@@ -46,6 +50,7 @@ public class Gamestate : MonoBehaviour {
             }
         }
 
+        ReduceLives();
         ChangeCurrentState(CurrentState.message);
     }
 
@@ -58,13 +63,19 @@ public class Gamestate : MonoBehaviour {
 
         divResult = lives % 2;
 
-        if (divResult == 0)
+        if (lives >= 0)
         {
-            StartCoroutine(ShowMessage(3.5f));
+            if (divResult == 0)
+            {
+                StartCoroutine(ShowMessage(3.5f));
+            }
+            else
+            {
+                StartCoroutine(ShowMessage(2.0f));
+            }
         }
-        else
-        {
-            StartCoroutine(ShowMessage(2.0f));
+        else {
+            ChangeCurrentState(CurrentState.gameOver);
         }
     }
 
@@ -92,6 +103,7 @@ public class Gamestate : MonoBehaviour {
                 break;
 
             case CurrentState.gameOver:
+                StartCoroutine(GameOver());
                 break;
 
             case CurrentState.cameraBackwards:
@@ -101,6 +113,10 @@ public class Gamestate : MonoBehaviour {
 
             case CurrentState.showHints:
                 BroadcastHintDisplay();
+                break;
+
+            case CurrentState.victory:
+                StartCoroutine(WinGame());
                 break;
         }
 
@@ -131,9 +147,7 @@ public class Gamestate : MonoBehaviour {
         Debug.Log("Showing message");
         yield return new WaitForSeconds(time);
 
-        //Changes state
-        Debug.Log("Load Scene....");
-        //ChangeCurrentState(CurrentState.respawn);
+        ReloadScene();
     }
 
     /// <summary>
@@ -336,7 +350,63 @@ public class Gamestate : MonoBehaviour {
 
         characterMovement.IsCharacterMoving = true;
         characterRigidbody.isKinematic = false;
+    }
 
-        
+    /// <summary>
+    /// Starts Game Over coroutine
+    /// </summary>
+    /// <returns>Reloads the scene</returns>
+    IEnumerator GameOver()
+    {
+        characterMovement.ActivateCharacterMovement(false);
+        characterRigidbody.gravityScale = 0.0f;
+
+        //Fades camera in
+        GameObject.Find("UI").GetComponent<CamFade>().CameraFade(true);
+        GameObject.Find("UI").GetComponent<MessageUI>().ActivateGameOverMessage();
+
+        yield return new WaitForSeconds(4.0f);
+        LoadMainMenu();
+    }
+
+    /// <summary>
+    /// Reloads this scene
+    /// </summary>
+    void ReloadScene() {
+        Debug.Log("Reloading...");
+        SceneManager.LoadScene("game");
+    }
+
+    /// <summary>
+    /// Loads main menu
+    /// </summary>
+    void LoadMainMenu() {
+        lifeController.LifeAmount = 9;
+        SceneManager.LoadScene("menu");
+    }
+
+    /// <summary>
+    /// Reduce the amount of lives
+    /// </summary>
+    void ReduceLives() {
+        lifeController.LifeAmount -= 1;
+        lives = lifeController.LifeAmount;
+        Debug.Log("Remaining lives: " + lives);
+    }
+
+    /// <summary>
+    /// Sets win game messages
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator WinGame() {
+
+        yield return new WaitForSeconds(2.0f);
+
+        //Fades camera in
+        GameObject.Find("UI").GetComponent<CamFade>().CameraFade(true);
+        GameObject.Find("UI").GetComponent<MessageUI>().ActivateWinMessage();
+
+        yield return new WaitForSeconds(8.0f);
+        LoadMainMenu();
     }
 }
