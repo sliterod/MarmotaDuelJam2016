@@ -32,6 +32,13 @@ public class Gamestate : MonoBehaviour {
         ChangeCurrentState(CurrentState.ingame);
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.GetComponent<Gamestate>().SendMessage("LoadMainMenu");
+        }
+    }
+
     /// <summary>
     /// Displays hints on rooms after death
     /// </summary>
@@ -429,7 +436,7 @@ public class Gamestate : MonoBehaviour {
     /// </summary>
     void LoadMainMenu() {
         Destroy(GameObject.Find("Loader"));
-        PlayerPrefs.SetInt("messageShown", 0);
+        Destroy(GameObject.Find("SoundManager"));
         SceneManager.LoadScene("menu");
     }
 

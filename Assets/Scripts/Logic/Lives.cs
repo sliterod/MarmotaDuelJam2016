@@ -20,5 +20,6 @@ public class Lives : MonoBehaviour {
 
     void Awake() {
         LifeAmount = 9;
+        Debug.Log("Lifes: " + LifeAmount);
     }
 }
