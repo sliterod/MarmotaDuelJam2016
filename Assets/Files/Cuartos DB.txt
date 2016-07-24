@@ -4,6 +4,7 @@ TheBigCrack (Hard)
 SkipTheSign (Easy)
 ThreeTorches (Easy)
 FourLevers (Normal)
+BetterBeFast (Normal)
 
 
 PD: Un run del juego deberia tener 5 cuartos (sin contar el del final y el tutorial)
