@@ -82,16 +82,17 @@ public class RoomController : MonoBehaviour {
         }
 
         //Beast door
-        /*foreach (GameObject go in beastDoor)
+        foreach (GameObject go in beastDoor)
         {
-            go
-        }*/
+            go.GetComponent<BeastDoor>().ActivateHint();
+        }
     }
 
     /// <summary>
     /// Show hints after death in normal mode
     /// </summary>
-    void NormalHints() {
+    protected void NormalHints() {
+        Debug.Log("Difficulty set on Normal. Hints are set to be shown after first death.");
         GameObject[] torches;
         GameObject[] redLevers;
         GameObject[] greenLevers;
@@ -120,6 +121,12 @@ public class RoomController : MonoBehaviour {
         foreach (GameObject go in greenLevers)
         {
             go.GetComponent<Animator>().SetBool("isPlaying", true);
+        }
+
+        //Beast door
+        foreach (GameObject go in beastDoor)
+        {
+            go.GetComponent<BeastDoor>().ActivateHint();
         }
     } 
 }

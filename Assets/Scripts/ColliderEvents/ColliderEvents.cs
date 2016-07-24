@@ -67,6 +67,12 @@ public class ColliderEvents : MonoBehaviour {
             GameObject.Find("Gamestate").SendMessage("ActivateSphere", triggerCollider.transform);
         }
 
+        if (triggerCollider.tag == "beast")
+        {
+            Debug.Log("Sphere triggered, activate flash");
+            GameObject.Find("Gamestate").SendMessage("ActivateBeastDoor", triggerCollider.transform);
+        }
+
         if (triggerCollider.tag == "spike")
         {
             Debug.Log("Spike triggered, activate flash");

@@ -8,6 +8,7 @@ public class Gamestate : MonoBehaviour {
     Rigidbody2D characterRigidbody;
     Animator animator;
     GameObject character;
+    GameObject[] loadedRooms;
 
     public int lives;
 
@@ -21,6 +22,29 @@ public class Gamestate : MonoBehaviour {
         animator = character.GetComponent<Animator>();
         
         ChangeCurrentState(CurrentState.ingame);
+    }
+
+    /// <summary>
+    /// Displays hints on rooms after death
+    /// </summary>
+    void BroadcastHintDisplay(){
+        Debug.Log("Broadcasting message");
+
+        SelectRooms selectRooms;
+        selectRooms = GameObject.Find("Loader").GetComponent<SelectRooms>();
+
+        //Rooms
+        loadedRooms = GameObject.FindGameObjectsWithTag("rooms");
+
+        //Check difficulty
+        if (selectRooms.CurrentDifficulty == Difficulty.easy || 
+            selectRooms.CurrentDifficulty == Difficulty.normal)
+        {
+            foreach (GameObject go in loadedRooms)
+            {
+                go.SendMessage("NormalHints");
+            }
+        }
     }
 
     /// <summary>
@@ -206,6 +230,33 @@ public class Gamestate : MonoBehaviour {
 
         /*yield return new WaitForSeconds(2.0f);
         GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+    }
+
+    /// <summary>
+    /// Activates the beast door
+    /// </summary>
+    /// <param name="door">Object with the door</param>
+    void ActivateBeastDoor(Transform door) {
+        characterMovement.IsCharacterMoving = false;
+
+        //Flash
+        GameObject.Find("Flash").SendMessage("ActivateFlash", true);
+        StartCoroutine(ActivateDoorCoroutine(door));
+    }
+
+    IEnumerator ActivateDoorCoroutine(Transform door) {
+        yield return new WaitForSeconds(0.05f);
+
+        //Change sprite
+        character.GetComponent<SpriteRenderer>().enabled = false;
+        character.transform.FindChild("crush").localScale = Vector2.one;
+
+        //Character change
+        character.transform.position = new Vector3( door.transform.position.x,
+                                                    character.transform.position.y,
+                                                    character.transform.position.z);
+
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
     }
 
     /// <summary>
