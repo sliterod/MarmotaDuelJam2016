@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a476ae42cba81c14fbd23ad0da935d11
-timeCreated: 1469393252
+guid: 6307eb44e271c0b459fcc0f36590d9b3
+timeCreated: 1469397756
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MenuBSpriteSheet_0
-    21300002: MenuBSpriteSheet_1
-    21300004: MenuBSpriteSheet_2
-    21300006: MenuBSpriteSheet_3
-    21300008: MenuBSpriteSheet_4
-    21300010: MenuBSpriteSheet_5
-    21300012: MenuBSpriteSheet_6
-    21300014: MenuBSpriteSheet_7
-    21300016: MenuBSpriteSheet_8
-    21300018: MenuBSpriteSheet_9
+    21300000: para1
+    21300002: purg1
+    21300004: infe1
+    21300006: cred1
+    21300008: cred2
+    21300010: inf2
+    21300012: purg2
+    21300014: para2
+    21300016: salir2
+    21300018: salir1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,7 +60,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: MenuBSpriteSheet_0
+    - name: para1
       rect:
         serializedVersion: 2
         x: 0
@@ -68,7 +68,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -50, y: 14}
@@ -77,7 +77,7 @@ TextureImporter:
         - {x: 46, y: -13}
         - {x: 49, y: -11}
         - {x: 49, y: 14}
-    - name: MenuBSpriteSheet_1
+    - name: purg1
       rect:
         serializedVersion: 2
         x: 100
@@ -85,7 +85,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -94,7 +94,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_2
+    - name: infe1
       rect:
         serializedVersion: 2
         x: 200
@@ -102,7 +102,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -111,7 +111,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_3
+    - name: cred1
       rect:
         serializedVersion: 2
         x: 300
@@ -119,7 +119,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -128,7 +128,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_4
+    - name: cred2
       rect:
         serializedVersion: 2
         x: 400
@@ -136,7 +136,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -145,7 +145,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_5
+    - name: inf2
       rect:
         serializedVersion: 2
         x: 500
@@ -153,7 +153,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -162,7 +162,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_6
+    - name: purg2
       rect:
         serializedVersion: 2
         x: 600
@@ -170,7 +170,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -179,7 +179,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_7
+    - name: para2
       rect:
         serializedVersion: 2
         x: 700
@@ -187,7 +187,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -196,7 +196,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_8
+    - name: salir2
       rect:
         serializedVersion: 2
         x: 800
@@ -204,7 +204,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}
@@ -213,7 +213,7 @@ TextureImporter:
         - {x: 49, y: -13}
         - {x: 49, y: 12}
         - {x: 46, y: 14}
-    - name: MenuBSpriteSheet_9
+    - name: salir1
       rect:
         serializedVersion: 2
         x: 900
@@ -221,7 +221,7 @@ TextureImporter:
         width: 100
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -49, y: 14}

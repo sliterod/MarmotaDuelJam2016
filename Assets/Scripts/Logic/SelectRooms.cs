@@ -24,7 +24,7 @@ public class SelectRooms : MonoBehaviour {
     void Awake () {
         DontDestroyOnLoad(this.gameObject);
 
-        currentDifficulty = Difficulty.normal;
+        currentDifficulty = Difficulty.easy;
 	}
 
     /// <summary>
@@ -32,7 +32,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomEasy()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Easy1");
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomNormal()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Normal1");
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomInsane()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Hard1");
     }
 
     /// <summary>

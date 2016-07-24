@@ -11,6 +11,7 @@ public class Gamestate : MonoBehaviour {
     GameObject character;
     GameObject[] loadedRooms;
     Lives lifeController;
+    SelectRooms selectRooms;
 
     int lives;
 
@@ -24,8 +25,15 @@ public class Gamestate : MonoBehaviour {
         animator = character.GetComponent<Animator>();
         lifeController = GameObject.Find("Loader").GetComponent<Lives>();
         lives = lifeController.LifeAmount;
+        selectRooms = GameObject.Find("Loader").GetComponent<SelectRooms>();
 
         ChangeCurrentState(CurrentState.ingame);
+
+        if (selectRooms.CurrentDifficulty == Difficulty.easy ||
+            selectRooms.CurrentDifficulty == Difficulty.normal)
+        {
+            GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
+        }
     }
 
     /// <summary>
@@ -33,9 +41,6 @@ public class Gamestate : MonoBehaviour {
     /// </summary>
     void BroadcastHintDisplay(){
         Debug.Log("Broadcasting message");
-
-        SelectRooms selectRooms;
-        selectRooms = GameObject.Find("Loader").GetComponent<SelectRooms>();
 
         //Rooms
         loadedRooms = GameObject.FindGameObjectsWithTag("rooms");
@@ -46,7 +51,7 @@ public class Gamestate : MonoBehaviour {
         {
             foreach (GameObject go in loadedRooms)
             {
-                go.SendMessage("NormalHints");
+                go.SendMessage("NormalHints", SendMessageOptions.DontRequireReceiver);
             }
         }
 
@@ -140,7 +145,30 @@ public class Gamestate : MonoBehaviour {
 
         if (time > 1.0f)
         {
-            GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
+            //GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
+
+            switch (lives) {
+                case 8:
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(0);
+                    break;
+
+                case 6:
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(1);
+                    break;
+
+                case 4:
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(2);
+                    break;
+
+                case 2:
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(3);
+                    break;
+
+                case 0:
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(5);
+                    break;
+            }
+
         }
 
         //Shows message
@@ -374,14 +402,28 @@ public class Gamestate : MonoBehaviour {
     /// </summary>
     void ReloadScene() {
         Debug.Log("Reloading...");
-        SceneManager.LoadScene("game");
+        
+        if (selectRooms.CurrentDifficulty == Difficulty.easy)
+        {
+            SceneManager.LoadScene("Easy1");
+        }
+
+        if (selectRooms.CurrentDifficulty == Difficulty.normal)
+        {
+            SceneManager.LoadScene("Normal1");
+        }
+
+        if (selectRooms.CurrentDifficulty == Difficulty.insane)
+        {
+            SceneManager.LoadScene("Hard1");
+        }
     }
 
     /// <summary>
     /// Loads main menu
     /// </summary>
     void LoadMainMenu() {
-        lifeController.LifeAmount = 9;
+        Destroy(GameObject.Find("Loader"));
         SceneManager.LoadScene("menu");
     }
 
@@ -402,9 +444,11 @@ public class Gamestate : MonoBehaviour {
 
         yield return new WaitForSeconds(2.0f);
 
+        Difficulty currentDiff = selectRooms.CurrentDifficulty;
+
         //Fades camera in
         GameObject.Find("UI").GetComponent<CamFade>().CameraFade(true);
-        GameObject.Find("UI").GetComponent<MessageUI>().ActivateWinMessage();
+        GameObject.Find("UI").GetComponent<MessageUI>().ActivateWinMessage(currentDiff);
 
         yield return new WaitForSeconds(8.0f);
         LoadMainMenu();
