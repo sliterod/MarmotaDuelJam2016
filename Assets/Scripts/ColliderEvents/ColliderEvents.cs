@@ -108,6 +108,15 @@ public class ColliderEvents : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "crush")
+        {
+            Debug.Log("Sphere triggered, activate flash");
+            GameObject.Find("Gamestate").SendMessage("ActivateSphere", other.transform);
+        }
+    }
+
     /// <summary>
     /// Resets jump trigger bool
     /// </summary>
