@@ -90,6 +90,8 @@ public class ColliderEvents : MonoBehaviour {
         {
             Debug.Log("Nice, you won");
             this.GetComponent<CharacterMovement>().IsCharacterMoving = false;
+
+            GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.victory);
         }
     }
 

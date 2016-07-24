@@ -18,7 +18,7 @@ public class MenuButtons : MonoBehaviour {
     public void Easy()
     {
         Debug.Log("Difficulty set to EASY");
-        loader.GetComponent<SelectRooms>().RandomizeScenes(Difficulty.easy);
+        //loader.GetComponent<SelectRooms>().RandomizeScenes(Difficulty.easy);
     }
 
     public void Normal()
@@ -31,5 +31,19 @@ public class MenuButtons : MonoBehaviour {
     {
         Debug.Log("Difficulty set to INSANE");
         loader.GetComponent<SelectRooms>().RandomizeScenes(Difficulty.insane);
+    }
+
+    public void Exit() {
+        StartCoroutine(ExitCoroutine());
+    }
+
+    IEnumerator ExitCoroutine() {
+        yield return new WaitForSeconds(2.0f);
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
     }
 }

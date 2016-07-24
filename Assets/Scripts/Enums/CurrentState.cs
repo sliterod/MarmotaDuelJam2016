@@ -6,5 +6,6 @@
     gameOver,
     cameraBackwards,
     showHints,
-    reloadScene
+    reloadScene,
+    victory
 }
