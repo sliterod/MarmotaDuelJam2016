@@ -20,7 +20,7 @@ public class Gamestate : MonoBehaviour {
         characterMovement = character.GetComponent<CharacterMovement>();
         characterRigidbody = character.GetComponent<Rigidbody2D>();
         animator = character.GetComponent<Animator>();
-        
+
         ChangeCurrentState(CurrentState.ingame);
     }
 
@@ -45,6 +45,8 @@ public class Gamestate : MonoBehaviour {
                 go.SendMessage("NormalHints");
             }
         }
+
+        ChangeCurrentState(CurrentState.message);
     }
 
     /// <summary>
@@ -91,6 +93,15 @@ public class Gamestate : MonoBehaviour {
 
             case CurrentState.gameOver:
                 break;
+
+            case CurrentState.cameraBackwards:
+                GameObject.FindGameObjectWithTag("MainCamera")
+                    .SendMessage("ActivateBackwardMotion");
+                break;
+
+            case CurrentState.showHints:
+                BroadcastHintDisplay();
+                break;
         }
 
     }
@@ -101,6 +112,8 @@ public class Gamestate : MonoBehaviour {
     /// <param name="time">Waiting time</param>
     /// <returns>Respawn the character after time is out</returns>
     IEnumerator ShowMessage(float time) {
+
+        yield return new WaitForSeconds(2.0f);
 
         //Stops character
         characterMovement.ActivateCharacterMovement(false);
@@ -119,7 +132,8 @@ public class Gamestate : MonoBehaviour {
         yield return new WaitForSeconds(time);
 
         //Changes state
-        ChangeCurrentState(CurrentState.respawn);
+        Debug.Log("Load Scene....");
+        //ChangeCurrentState(CurrentState.respawn);
     }
 
     /// <summary>
@@ -151,7 +165,9 @@ public class Gamestate : MonoBehaviour {
         GameObject.Find("Main Camera").GetComponent<CamFollow>().CanFollowCharacter = false;
         animator.SetTrigger("pitfall");
 
-        StartCoroutine(BottomPitCoroutine());
+        //StartCoroutine(BottomPitCoroutine());
+        //Go to camera
+        ChangeCurrentState(CurrentState.cameraBackwards);
     }
 
     IEnumerator BottomPitCoroutine() {
@@ -190,8 +206,8 @@ public class Gamestate : MonoBehaviour {
 
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.10f);
 
-        /*yield return new WaitForSeconds(2.0f);
-        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+        //Go to camera
+        ChangeCurrentState(CurrentState.cameraBackwards);
     }
 
     /// <summary>
@@ -228,8 +244,8 @@ public class Gamestate : MonoBehaviour {
 
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
 
-        /*yield return new WaitForSeconds(2.0f);
-        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+        //Go to camera
+        ChangeCurrentState(CurrentState.cameraBackwards);
     }
 
     /// <summary>
@@ -257,6 +273,9 @@ public class Gamestate : MonoBehaviour {
                                                     character.transform.position.z);
 
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
+
+        //Go to camera
+        ChangeCurrentState(CurrentState.cameraBackwards);
     }
 
     /// <summary>
@@ -290,8 +309,8 @@ public class Gamestate : MonoBehaviour {
 
         character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
 
-        /*yield return new WaitForSeconds(2.0f);
-        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+        //Go to camera
+        ChangeCurrentState(CurrentState.cameraBackwards);
     }
 
     /// <summary>

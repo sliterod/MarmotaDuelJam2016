@@ -3,5 +3,8 @@
     ingame,
     message,
     respawn,
-    gameOver
+    gameOver,
+    cameraBackwards,
+    showHints,
+    reloadScene
 }
