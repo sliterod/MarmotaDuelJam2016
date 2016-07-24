@@ -26,6 +26,7 @@ public class ColliderEvents : MonoBehaviour {
             isCharacterJumping = true;
             
             animator.SetTrigger("isJumping");
+            PlaySound();
         }
 
         if (triggerCollider.tag == "hazard")
@@ -93,6 +94,14 @@ public class ColliderEvents : MonoBehaviour {
 
             GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.victory);
         }
+
+        if (triggerCollider.tag == "fakeDoor")
+        {
+            Debug.Log("Game over, try again");
+            this.GetComponent<CharacterMovement>().IsCharacterMoving = false;
+
+            GameObject.Find("Gamestate").SendMessage("ActivateBeastDoor", triggerCollider.transform);
+        }
     }
 
     void OnTriggerExit2D(Collider2D triggerCollider)
@@ -111,11 +120,6 @@ public class ColliderEvents : MonoBehaviour {
             GameObject.Find("Gamestate").SendMessage("DeactivateClimb");
             isCharacterClimbing = false;
         }
-
-        if (triggerCollider.tag == "fakeDoor") {
-            Debug.Log("Game over, try again");
-        }
-
         
     }
 
@@ -134,5 +138,15 @@ public class ColliderEvents : MonoBehaviour {
     void ResetJumpTrigger() {
         isCharacterJumping = false;
         Debug.Log("Jump Trigger reset.");
+    }
+
+
+    /// <summary>
+    /// Plays object sound
+    /// </summary>
+    void PlaySound()
+    {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>()
+            .PlayJump();
     }
 }

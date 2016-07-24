@@ -15,6 +15,7 @@ public class TorchEvent : MonoBehaviour {
             Debug.Log("Click on element");
 
             PlayAnimation();
+            PlaySound();
         }
     }
 
@@ -43,4 +44,13 @@ public class TorchEvent : MonoBehaviour {
         DeactivateHazard();
     }
 
+
+    /// <summary>
+    /// Plays object sound
+    /// </summary>
+    void PlaySound()
+    {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>()
+            .PlayPuzzleOK();
+    }
 }

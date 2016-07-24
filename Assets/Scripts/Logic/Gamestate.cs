@@ -12,6 +12,7 @@ public class Gamestate : MonoBehaviour {
     GameObject[] loadedRooms;
     Lives lifeController;
     SelectRooms selectRooms;
+    SoundManager soundManager;
 
     int lives;
 
@@ -26,13 +27,17 @@ public class Gamestate : MonoBehaviour {
         lifeController = GameObject.Find("Loader").GetComponent<Lives>();
         lives = lifeController.LifeAmount;
         selectRooms = GameObject.Find("Loader").GetComponent<SelectRooms>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
 
         ChangeCurrentState(CurrentState.ingame);
 
         if (selectRooms.CurrentDifficulty == Difficulty.easy ||
             selectRooms.CurrentDifficulty == Difficulty.normal)
         {
-            GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
+            if (PlayerPrefs.GetInt("messageShown", 0) == 0) {
+                PlayerPrefs.SetInt("messageShown", 1);
+                GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(true);
+            }
         }
     }
 
@@ -142,6 +147,7 @@ public class Gamestate : MonoBehaviour {
 
         //Fades camera in
         GameObject.Find("UI").GetComponent<CamFade>().CameraFade(true);
+        soundManager.PlayMessageSound();
 
         if (time > 1.0f)
         {
@@ -230,6 +236,7 @@ public class Gamestate : MonoBehaviour {
 
         //Flash
         GameObject.Find("Flash").SendMessage("ActivateFlash",true);
+        soundManager.PlayGuillotine();
 
         StartCoroutine(ActivateGuillotineCoroutine(guillotine));
     }
@@ -263,6 +270,7 @@ public class Gamestate : MonoBehaviour {
 
         //Flash
         GameObject.Find("Flash").SendMessage("ActivateFlash",true);
+        soundManager.PlayRock();
 
         StartCoroutine(ActivateSphereCoroutine(sphere));
     }
@@ -299,6 +307,8 @@ public class Gamestate : MonoBehaviour {
 
         //Flash
         GameObject.Find("Flash").SendMessage("ActivateFlash", true);
+        soundManager.PlayDeath();
+
         StartCoroutine(ActivateDoorCoroutine(door));
     }
 
@@ -341,6 +351,8 @@ public class Gamestate : MonoBehaviour {
         //Flash
         GameObject.Find("Flash").SendMessage("ActivateFlash", true);
         spike.GetComponent<Animator>().SetTrigger("spike");
+
+        soundManager.PlayDeath();
 
         yield return new WaitForSeconds(0.1f);
         
@@ -393,6 +405,8 @@ public class Gamestate : MonoBehaviour {
         GameObject.Find("UI").GetComponent<CamFade>().CameraFade(true);
         GameObject.Find("UI").GetComponent<MessageUI>().ActivateGameOverMessage();
 
+        soundManager.PlayGameOver();
+
         yield return new WaitForSeconds(4.0f);
         LoadMainMenu();
     }
@@ -415,7 +429,7 @@ public class Gamestate : MonoBehaviour {
 
         if (selectRooms.CurrentDifficulty == Difficulty.insane)
         {
-            SceneManager.LoadScene("Hard1");
+            SceneManager.LoadScene("Insane");
         }
     }
 
@@ -424,6 +438,7 @@ public class Gamestate : MonoBehaviour {
     /// </summary>
     void LoadMainMenu() {
         Destroy(GameObject.Find("Loader"));
+        PlayerPrefs.SetInt("messageShown", 0);
         SceneManager.LoadScene("menu");
     }
 

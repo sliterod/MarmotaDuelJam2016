@@ -23,8 +23,6 @@ public class SelectRooms : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         DontDestroyOnLoad(this.gameObject);
-
-        currentDifficulty = Difficulty.easy;
 	}
 
     /// <summary>
@@ -48,7 +46,7 @@ public class SelectRooms : MonoBehaviour {
     /// </summary>
     void RandomInsane()
     {
-        SceneManager.LoadScene("Hard1");
+        SceneManager.LoadScene("Insane");
     }
 
     /// <summary>
