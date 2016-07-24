@@ -26,6 +26,7 @@ public class ColliderEvents : MonoBehaviour {
             isCharacterJumping = true;
             
             animator.SetTrigger("isJumping");
+            PlaySound();
         }
 
         if (triggerCollider.tag == "hazard")
@@ -134,5 +135,15 @@ public class ColliderEvents : MonoBehaviour {
     void ResetJumpTrigger() {
         isCharacterJumping = false;
         Debug.Log("Jump Trigger reset.");
+    }
+
+
+    /// <summary>
+    /// Plays object sound
+    /// </summary>
+    void PlaySound()
+    {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>()
+            .PlayJump();
     }
 }

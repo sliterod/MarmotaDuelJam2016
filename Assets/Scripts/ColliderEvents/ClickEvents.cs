@@ -10,6 +10,7 @@ public class ClickEvents : MonoBehaviour {
             Debug.Log("Click on element");
 
             PlayAnimation();
+            PlaySound();
         }
     }
 
@@ -33,5 +34,13 @@ public class ClickEvents : MonoBehaviour {
         animator.SetBool("isPlaying", true);
 
         DeactivateHazard();
+    }
+
+    /// <summary>
+    /// Plays object sound
+    /// </summary>
+    void PlaySound() {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>()
+            .PlayPuzzleOK();
     }
 }
