@@ -82,10 +82,10 @@ public class RoomController : MonoBehaviour {
         }
 
         //Beast door
-        /*foreach (GameObject go in beastDoor)
+        foreach (GameObject go in beastDoor)
         {
-            go
-        }*/
+            go.GetComponent<BeastDoor>().ActivateHint();
+        }
     }
 
     /// <summary>
@@ -120,6 +120,12 @@ public class RoomController : MonoBehaviour {
         foreach (GameObject go in greenLevers)
         {
             go.GetComponent<Animator>().SetBool("isPlaying", true);
+        }
+
+        //Beast door
+        foreach (GameObject go in beastDoor)
+        {
+            go.GetComponent<BeastDoor>().ActivateHint();
         }
     } 
 }
