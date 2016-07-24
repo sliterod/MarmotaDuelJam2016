@@ -7,7 +7,7 @@ public class TutorialRoom : RoomController {
 
 	// Use this for initialization
 	void Start () {
-        fixedDiff = Difficulty.easy;
-        CheckDifficulty(fixedDiff);
+        //fixedDiff = Difficulty.easy;
+        //CheckDifficulty(fixedDiff);
 	}
 }
