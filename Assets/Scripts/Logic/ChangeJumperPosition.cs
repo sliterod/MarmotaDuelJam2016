@@ -27,6 +27,8 @@ public class ChangeJumperPosition : MonoBehaviour {
 
         if (hit)
         {
+            Debug.Log(hit.collider.name);
+
             if (hit.collider.name == "ColliderPlane") {
                 Debug.Log(hit.point.x);
                 jumper.transform.position = new Vector2(hit.point.x,
