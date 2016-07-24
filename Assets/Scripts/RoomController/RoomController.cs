@@ -70,10 +70,12 @@ public class RoomController : MonoBehaviour {
 
         GameObject[] torches;
         GameObject[] beastDoor;
+        GameObject[] hints;
 
         //Getting all objects
         torches = GameObject.FindGameObjectsWithTag("torch");
         beastDoor = GameObject.FindGameObjectsWithTag("beast");
+        hints = GameObject.FindGameObjectsWithTag("hint");
 
         //Triggering all waiting animations
         //Torches
@@ -86,6 +88,12 @@ public class RoomController : MonoBehaviour {
         {
             go.GetComponent<BeastDoor>().ActivateHint();
         }
+
+        //Helpers
+        foreach (GameObject go in hints)
+        {
+            go.transform.localScale = Vector2.one;
+        }
     }
 
     /// <summary>
@@ -97,12 +105,14 @@ public class RoomController : MonoBehaviour {
         GameObject[] redLevers;
         GameObject[] greenLevers;
         GameObject[] beastDoor;
+        GameObject[] hints;
 
         //Getting all objects
         torches = GameObject.FindGameObjectsWithTag("torch");
         redLevers = GameObject.FindGameObjectsWithTag("redLever");
         greenLevers = GameObject.FindGameObjectsWithTag("greenLever");
         beastDoor = GameObject.FindGameObjectsWithTag("beast");
+        hints = GameObject.FindGameObjectsWithTag("hint");
 
         //Triggering all waiting animations
         //Torches
@@ -127,6 +137,12 @@ public class RoomController : MonoBehaviour {
         foreach (GameObject go in beastDoor)
         {
             go.GetComponent<BeastDoor>().ActivateHint();
+        }
+
+        //Helpers
+        foreach (GameObject go in hints)
+        {
+            go.transform.localScale = Vector2.one;
         }
     } 
 }
