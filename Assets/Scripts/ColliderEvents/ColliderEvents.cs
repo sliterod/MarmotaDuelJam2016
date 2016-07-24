@@ -8,6 +8,7 @@ public class ColliderEvents : MonoBehaviour {
     Animator animator;
 
     bool isCharacterJumping;
+    bool isCharacterClimbing;
 
     void Start() {
         characterAction = this.GetComponent<CharacterAction>();
@@ -33,9 +34,13 @@ public class ColliderEvents : MonoBehaviour {
             GameObject.Find("Gamestate").SendMessage("BottomPit");
         }
 
-        if (triggerCollider.tag == "climb")
+        if (triggerCollider.tag == "climb" && !isCharacterClimbing)
         {
             Debug.Log("Send message to climb method");
+
+            characterAction.isClimbing = true;
+            isCharacterClimbing = true;
+            GameObject.Find("Gamestate").SendMessage("ActivateClimb");
         }
 
         if (triggerCollider.tag == "zoomIn")
@@ -53,7 +58,19 @@ public class ColliderEvents : MonoBehaviour {
         if (triggerCollider.tag == "guillotine")
         {
             Debug.Log("Guillotine triggered, activate flash");
-            GameObject.Find("Gamestate").SendMessage("ActivateGuillotine");
+            GameObject.Find("Gamestate").SendMessage("ActivateGuillotine", triggerCollider.transform);
+        }
+
+        if (triggerCollider.tag == "crush")
+        {
+            Debug.Log("Sphere triggered, activate flash");
+            GameObject.Find("Gamestate").SendMessage("ActivateSphere", triggerCollider.transform);
+        }
+
+        if (triggerCollider.tag == "spike")
+        {
+            Debug.Log("Spike triggered, activate flash");
+            GameObject.Find("Gamestate").SendMessage("ActivateSpikes", triggerCollider.transform);
         }
 
         if (triggerCollider.tag == "floorButton")
@@ -68,6 +85,26 @@ public class ColliderEvents : MonoBehaviour {
     {
         if (triggerCollider.tag == "jump" && isCharacterJumping) {
             ResetJumpTrigger();
+        }
+
+        if (triggerCollider.tag == "climb")
+        {
+            Debug.Log("Climbing finished");
+            characterAction.isClimbing = false;
+
+            triggerCollider.GetComponent<BoxCollider2D>().enabled = false;
+
+            GameObject.Find("Gamestate").SendMessage("DeactivateClimb");
+            isCharacterClimbing = false;
+        }
+
+        if (triggerCollider.tag == "fakeDoor") {
+            Debug.Log("Game over, try again");
+        }
+
+        if (triggerCollider.tag == "trueDoor")
+        {
+            Debug.Log("Nice, you won");
         }
     }
 

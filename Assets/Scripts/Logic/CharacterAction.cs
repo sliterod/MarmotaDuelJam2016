@@ -7,6 +7,7 @@ public class CharacterAction : MonoBehaviour {
     public float jumpMaxY;      //Maximum y distance
     public float climbSpeed;    //Climbing speed (ladder only)
     public bool isJumping;      //Is character jumping?
+    public bool isClimbing;     //Is character climbing?
 
     float initialPositionY;     //Character initial position on y-axis
 
@@ -18,6 +19,10 @@ public class CharacterAction : MonoBehaviour {
 	void Update () {
         if (isJumping) {
             Jump();
+        }
+
+        if (isClimbing) {
+            Climb();
         }
 	}
 
@@ -41,5 +46,16 @@ public class CharacterAction : MonoBehaviour {
             isJumping = false;
             this.GetComponent<Rigidbody2D>().isKinematic = false;
         }
+    }
+
+    /// <summary>
+    /// Makes the character climb
+    /// </summary>
+    void Climb() {
+        float yPosition = this.transform.position.y;
+
+        this.transform.position = new Vector3(  this.transform.position.x,
+                                                this.transform.position.y + climbSpeed,
+                                                this.transform.position.z);
     }
 }

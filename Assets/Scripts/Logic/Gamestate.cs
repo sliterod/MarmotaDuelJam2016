@@ -138,7 +138,7 @@ public class Gamestate : MonoBehaviour {
     /// <summary>
     /// Activates the guillotine effect
     /// </summary>
-    void ActivateGuillotine() {
+    void ActivateGuillotine(Transform guillotine) {
 
         characterMovement.IsCharacterMoving = false;
         
@@ -149,18 +149,18 @@ public class Gamestate : MonoBehaviour {
         //Flash
         GameObject.Find("Flash").SendMessage("ActivateFlash",true);
 
-        StartCoroutine(ActivateGuillotineCoroutine());
+        StartCoroutine(ActivateGuillotineCoroutine(guillotine));
     }
 
 
-    IEnumerator ActivateGuillotineCoroutine() {
+    IEnumerator ActivateGuillotineCoroutine(Transform guillotine) {
         yield return new WaitForSeconds(0.1f);
 
         //Sprite
-        GameObject.FindGameObjectWithTag("guillotine").SendMessage("DropGuillotine");
+        guillotine.gameObject.SendMessage("DropGuillotine");
 
         //Character change
-        character.transform.position = new Vector3(20.22f,
+        character.transform.position = new Vector3( guillotine.transform.position.x,
                                                     character.transform.position.y,
                                                     character.transform.position.z);
 
@@ -168,5 +168,105 @@ public class Gamestate : MonoBehaviour {
 
         /*yield return new WaitForSeconds(2.0f);
         GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+    }
+
+    /// <summary>
+    /// Activates sphere animation
+    /// </summary>
+    void ActivateSphere(Transform sphere) {
+        characterMovement.IsCharacterMoving = false;
+        
+        //Animation start
+        animator.SetTrigger("crush");
+
+        //Flash
+        GameObject.Find("Flash").SendMessage("ActivateFlash",true);
+
+        StartCoroutine(ActivateSphereCoroutine(sphere));
+    }
+
+
+    IEnumerator ActivateSphereCoroutine(Transform sphere)
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        //Sprite
+        sphere.gameObject.SendMessage("DropBall");
+
+        //Change sprite
+        character.GetComponent<SpriteRenderer>().enabled = false;
+        character.transform.FindChild("crush").localScale = Vector2.one;
+
+        //Character change
+        character.transform.position = new Vector3( sphere.transform.position.x,
+                                                    character.transform.position.y,
+                                                    character.transform.position.z);
+
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
+
+        /*yield return new WaitForSeconds(2.0f);
+        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+    }
+
+    /// <summary>
+    /// Activates the spike effect
+    /// </summary>
+    void ActivateSpikes(Transform spike)
+    {
+        characterMovement.IsCharacterMoving = false;
+        
+        StartCoroutine(ActivateSpikesCoroutine(spike));
+    }
+
+    IEnumerator ActivateSpikesCoroutine(Transform spike)
+    {
+        //Sprite first change
+        yield return new WaitForSeconds(0.05f);      
+
+        //Animation start
+        animator.SetTrigger("spike");
+
+        //Flash
+        GameObject.Find("Flash").SendMessage("ActivateFlash", true);
+        spike.GetComponent<Animator>().SetTrigger("spike");
+
+        yield return new WaitForSeconds(0.1f);
+        
+        //Character change
+        character.transform.position = new Vector3( spike.transform.position.x,
+                                                    character.transform.position.y,
+                                                    character.transform.position.z);
+
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.05f);
+
+        /*yield return new WaitForSeconds(2.0f);
+        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
+    }
+
+    /// <summary>
+    /// Activates climb animation
+    /// </summary>
+    void ActivateClimb() {
+        characterMovement.IsCharacterMoving = false;
+        characterRigidbody.isKinematic = true;
+
+        animator.SetTrigger("climb");
+    }
+
+    /// <summary>
+    /// Deactivates climb animation
+    /// </summary>
+    void DeactivateClimb() {
+        StartCoroutine(DeactivateClimbCoroutine());
+    }
+
+    IEnumerator DeactivateClimbCoroutine() {
+        animator.SetTrigger("climbFinished");
+        yield return new WaitForSeconds(0.3f);
+
+        characterMovement.IsCharacterMoving = true;
+        characterRigidbody.isKinematic = false;
+
+        
     }
 }
