@@ -165,7 +165,7 @@ public class Gamestate : MonoBehaviour {
                     break;
 
                 case 0:
-                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(4);
+                    GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(5);
                     break;
             }
 
