@@ -1,0 +1,12 @@
+button_beep:player presiona boton en el menu
+gameover_l: se agotaron las vidas
+gameover_l2: se agotaron las vidas
+goingback: looping mientras el msj se muestra a partir de los mensajes post tutorial
+guillotine_kill: lo que su nombre indica
+guillotine_kill2: otra opcion para lo que su nombre indica
+jump: sonido para salto
+jump2: otra opcion salto
+puzzle_right: triggerea al hacer algo bien (opcional)
+rocks: rocas impactan en el suelo
+rocks_2: rocas impactan en el suelo
+death_1: sonido de muerte con guillotina y posibles puas?
