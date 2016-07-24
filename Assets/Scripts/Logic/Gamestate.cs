@@ -8,6 +8,7 @@ public class Gamestate : MonoBehaviour {
     Rigidbody2D characterRigidbody;
     Animator animator;
     GameObject character;
+    GameObject[] loadedRooms;
 
     public int lives;
 
@@ -21,6 +22,29 @@ public class Gamestate : MonoBehaviour {
         animator = character.GetComponent<Animator>();
         
         ChangeCurrentState(CurrentState.ingame);
+    }
+
+    /// <summary>
+    /// Displays hints on rooms after death
+    /// </summary>
+    void BroadcastHintDisplay(){
+        Debug.Log("Broadcasting message");
+
+        SelectRooms selectRooms;
+        selectRooms = GameObject.Find("Loader").GetComponent<SelectRooms>();
+
+        //Rooms
+        loadedRooms = GameObject.FindGameObjectsWithTag("rooms");
+
+        //Check difficulty
+        if (selectRooms.CurrentDifficulty == Difficulty.easy || 
+            selectRooms.CurrentDifficulty == Difficulty.normal)
+        {
+            foreach (GameObject go in loadedRooms)
+            {
+                go.SendMessage("NormalHints");
+            }
+        }
     }
 
     /// <summary>

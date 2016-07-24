@@ -91,7 +91,8 @@ public class RoomController : MonoBehaviour {
     /// <summary>
     /// Show hints after death in normal mode
     /// </summary>
-    void NormalHints() {
+    protected void NormalHints() {
+        Debug.Log("Difficulty set on Normal. Hints are set to be shown after first death.");
         GameObject[] torches;
         GameObject[] redLevers;
         GameObject[] greenLevers;
