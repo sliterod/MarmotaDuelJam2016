@@ -8,7 +8,7 @@ public class CamBackwards : MonoBehaviour {
     float newDelta;
 
     void Start() {      
-        cameraDelta = 1.30f;
+        cameraDelta = 1.80f;
     }
 
     /// <summary>
@@ -52,13 +52,13 @@ public class CamBackwards : MonoBehaviour {
     void MoveCameraBackwards() {
         Debug.Log("CamPos: " + this.transform.position.x);
 
-        if (this.transform.position.x > cameraDelta)
+        if (this.transform.position.x > newDelta)
         {
             this.transform.position = new Vector3(this.transform.position.x - 0.02f,
                                                   this.transform.position.y,
                                                   this.transform.position.z);
         }
-        else if (this.transform.position.x <= cameraDelta)
+        else if (this.transform.position.x <= newDelta)
         {
             canCameraMove = false;
             GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.showHints);
