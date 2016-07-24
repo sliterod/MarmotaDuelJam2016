@@ -35,7 +35,7 @@ public class CharacterAction : MonoBehaviour {
 
         if (yPosition <= jumpMaxY)
         {
-            this.transform.position = new Vector3(this.transform.position.x + 0.05f,
+            this.transform.position = new Vector3(this.transform.position.x + 0.035f,
                                                     this.transform.position.y + jumpSpeed,
                                                     this.transform.position.z);
 
