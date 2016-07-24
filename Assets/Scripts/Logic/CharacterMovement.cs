@@ -5,11 +5,24 @@ public class CharacterMovement : MonoBehaviour {
 
     public float moveSpeed;     //Movement speed
     bool isCharacterMoving;     //Is character moving?
-    
+
+    public bool IsCharacterMoving
+    {
+        get
+        {
+            return isCharacterMoving;
+        }
+
+        set
+        {
+            isCharacterMoving = value;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (isCharacterMoving)
+        if (IsCharacterMoving)
         {
             MoveCharacter();
         }
@@ -30,6 +43,6 @@ public class CharacterMovement : MonoBehaviour {
     /// </summary>
     /// <param name="state">True for moving, false for stopping</param>
     public void ActivateCharacterMovement(bool state) {
-        isCharacterMoving = state;
+        IsCharacterMoving = state;
     }
 }

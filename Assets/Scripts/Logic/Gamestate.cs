@@ -6,14 +6,20 @@ public class Gamestate : MonoBehaviour {
     CurrentState currentState;
     CharacterMovement characterMovement;
     Rigidbody2D characterRigidbody;
+    Animator animator;
+    GameObject character;
 
     public int lives;
 
     // Use this for initialization
     void Start() {
-        characterMovement = GameObject.Find("character").GetComponent<CharacterMovement>();
-        characterRigidbody = GameObject.Find("character").GetComponent<Rigidbody2D>();
 
+        character = GameObject.Find("character");
+
+        characterMovement = character.GetComponent<CharacterMovement>();
+        characterRigidbody = character.GetComponent<Rigidbody2D>();
+        animator = character.GetComponent<Animator>();
+        
         ChangeCurrentState(CurrentState.ingame);
     }
 
@@ -28,11 +34,11 @@ public class Gamestate : MonoBehaviour {
 
         if (divResult == 0)
         {
-            StartCoroutine(ShowMessage(3.0f));
+            StartCoroutine(ShowMessage(3.5f));
         }
         else
         {
-            StartCoroutine(ShowMessage(1.0f));
+            StartCoroutine(ShowMessage(2.0f));
         }
     }
 
@@ -106,5 +112,61 @@ public class Gamestate : MonoBehaviour {
         //Fades camera out
         GameObject.Find("UI").GetComponent<CamFade>().CameraFade(false);
         GameObject.Find("UI").GetComponent<MessageUI>().ActivateMessage(false);
+
+        //Reset jumper
+        GameObject.Find("jumpEvent").transform.position = new Vector2(6.1f, -0.7f);
+
+        //Reset Collider
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.28f);
+    }
+
+    /// <summary>
+    /// Executes changes when character falls on a pit
+    /// </summary>
+    void BottomPit() {
+        GameObject.Find("Main Camera").GetComponent<CamFollow>().CanFollowCharacter = false;
+        animator.SetTrigger("pitfall");
+
+        StartCoroutine(BottomPitCoroutine());
+    }
+
+    IEnumerator BottomPitCoroutine() {
+        yield return new WaitForSeconds(2.0f);
+        //ChangeCurrentState(CurrentState.message);
+    }
+
+    /// <summary>
+    /// Activates the guillotine effect
+    /// </summary>
+    void ActivateGuillotine() {
+
+        characterMovement.IsCharacterMoving = false;
+        
+        //Animation start
+        animator.SetTrigger("guillotine");
+        animator.SetBool("isGuillotineTrap", false);
+
+        //Flash
+        GameObject.Find("Flash").SendMessage("ActivateFlash",true);
+
+        StartCoroutine(ActivateGuillotineCoroutine());
+    }
+
+
+    IEnumerator ActivateGuillotineCoroutine() {
+        yield return new WaitForSeconds(0.1f);
+
+        //Sprite
+        GameObject.FindGameObjectWithTag("guillotine").SendMessage("DropGuillotine");
+
+        //Character change
+        character.transform.position = new Vector3(20.22f,
+                                                    character.transform.position.y,
+                                                    character.transform.position.z);
+
+        character.GetComponent<BoxCollider2D>().size = new Vector2(0.21f, 0.10f);
+
+        /*yield return new WaitForSeconds(2.0f);
+        GameObject.Find("Flash").SendMessage("ActivateFlashMessage", true);*/
     }
 }

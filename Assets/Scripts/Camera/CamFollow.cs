@@ -5,6 +5,7 @@ public class CamFollow : MonoBehaviour {
 
     float cameraXposAddedValue;
     public Transform character;
+    bool canFollowCharacter;
 
     public float CameraXposAddedValue
     {
@@ -19,9 +20,29 @@ public class CamFollow : MonoBehaviour {
         }
     }
 
+    public bool CanFollowCharacter
+    {
+        get
+        {
+            return canFollowCharacter;
+        }
+
+        set
+        {
+            canFollowCharacter = value;
+        }
+    }
+
+    void Awake() {
+        canFollowCharacter = true;
+    }
+
     // Update is called once per frame
     void Update () {
-        FollowCharacter(cameraXposAddedValue);
+        if (canFollowCharacter)
+        {
+            FollowCharacter(cameraXposAddedValue);
+        }
     }
 
     /// <summary>

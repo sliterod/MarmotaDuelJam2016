@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 0f8ad1215707c4c4aa61d2214032e3f4
-timeCreated: 1469308162
+timeCreated: 1469324501
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: StageSpriteSheet_Beast_0
+    21300002: StageSpriteSheet_Beast_1
+    21300004: StageSpriteSheet_Beast_2
+    21300006: StageSpriteSheet_Beast_3
+    21300008: StageSpriteSheet_Beast_4
+    21300010: StageSpriteSheet_Beast_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +44,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +55,306 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: StageSpriteSheet_Beast_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -18}
+        - {x: 12, y: 18}
+        - {x: 12, y: 21}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
+      - - {x: 14, y: 14}
+        - {x: 7, y: 14}
+        - {x: 7, y: 9}
+        - {x: 9, y: 4}
+        - {x: 16, y: -8}
+        - {x: 19, y: -7}
+        - {x: 24, y: -4}
+        - {x: 24, y: 3}
+        - {x: 23, y: 9}
+      - - {x: 7, y: 8}
+        - {x: 5, y: 8}
+        - {x: 2, y: 4}
+        - {x: 2, y: 2}
+        - {x: 4, y: 0}
+        - {x: 6, y: 0}
+        - {x: 9, y: 3}
+        - {x: 9, y: 7}
+    - name: StageSpriteSheet_Beast_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -4}
+        - {x: 18, y: -10}
+        - {x: 24, y: -5}
+        - {x: 24, y: 2}
+        - {x: 20, y: 13}
+        - {x: 9, y: 14}
+        - {x: 7, y: 12}
+        - {x: 2, y: 5}
+        - {x: 7, y: 13}
+        - {x: 12, y: 18}
+        - {x: 13, y: 20}
+        - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -17}
+        - {x: 10, y: 3}
+        - {x: 10, y: 7}
+        - {x: 10, y: 5}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
+      - - {x: -2, y: -10}
+        - {x: -1, y: -13}
+        - {x: 5, y: -13}
+        - {x: 7, y: -11}
+        - {x: 6, y: -8}
+        - {x: 0, y: -8}
+    - name: StageSpriteSheet_Beast_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -18}
+        - {x: 12, y: 18}
+        - {x: 12, y: 21}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
+      - - {x: -5, y: -11}
+        - {x: 1, y: -17}
+        - {x: 3, y: -17}
+        - {x: 9, y: -11}
+        - {x: 8, y: -8}
+        - {x: -4, y: -8}
+      - - {x: -3, y: -5}
+        - {x: -2, y: -8}
+        - {x: 5, y: -8}
+        - {x: 7, y: -6}
+        - {x: 6, y: -3}
+        - {x: -1, y: -3}
+      - - {x: 14, y: 14}
+        - {x: 7, y: 14}
+        - {x: 7, y: 9}
+        - {x: 9, y: 4}
+        - {x: 16, y: -8}
+        - {x: 19, y: -7}
+        - {x: 24, y: -4}
+        - {x: 24, y: 3}
+        - {x: 23, y: 9}
+      - - {x: 7, y: 8}
+        - {x: 5, y: 8}
+        - {x: 2, y: 4}
+        - {x: 2, y: 2}
+        - {x: 4, y: 0}
+        - {x: 6, y: 0}
+        - {x: 9, y: 3}
+        - {x: 9, y: 7}
+    - name: StageSpriteSheet_Beast_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -4}
+        - {x: 18, y: -10}
+        - {x: 24, y: -5}
+        - {x: 24, y: 2}
+        - {x: 20, y: 13}
+        - {x: 9, y: 14}
+        - {x: 7, y: 12}
+        - {x: 2, y: 5}
+        - {x: 7, y: 13}
+        - {x: 12, y: 18}
+        - {x: 13, y: 20}
+        - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -17}
+        - {x: 10, y: 3}
+        - {x: 10, y: 7}
+        - {x: 10, y: 5}
+      - - {x: -7, y: -1}
+        - {x: -8, y: -4}
+        - {x: -8, y: -11}
+        - {x: 2, y: -21}
+        - {x: 3, y: -21}
+        - {x: 13, y: -11}
+        - {x: 12, y: -2}
+        - {x: 10, y: -1}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
+    - name: StageSpriteSheet_Beast_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -18}
+        - {x: 12, y: 18}
+        - {x: 12, y: 21}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
+      - - {x: -5, y: -11}
+        - {x: 1, y: -17}
+        - {x: 3, y: -17}
+        - {x: 9, y: -11}
+        - {x: 8, y: -8}
+        - {x: -4, y: -8}
+      - - {x: -3, y: -5}
+        - {x: -2, y: -8}
+        - {x: 5, y: -8}
+        - {x: 7, y: -6}
+        - {x: 6, y: -3}
+        - {x: -1, y: -3}
+      - - {x: 14, y: 14}
+        - {x: 7, y: 14}
+        - {x: 7, y: 9}
+        - {x: 9, y: 4}
+        - {x: 16, y: -8}
+        - {x: 19, y: -7}
+        - {x: 24, y: -4}
+        - {x: 24, y: 3}
+        - {x: 23, y: 9}
+      - - {x: 7, y: 8}
+        - {x: 5, y: 8}
+        - {x: 2, y: 4}
+        - {x: 2, y: 2}
+        - {x: 4, y: 0}
+        - {x: 6, y: 0}
+        - {x: 9, y: 3}
+        - {x: 9, y: 7}
+    - name: StageSpriteSheet_Beast_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -4}
+        - {x: 18, y: -10}
+        - {x: 24, y: -5}
+        - {x: 24, y: 2}
+        - {x: 20, y: 13}
+        - {x: 9, y: 14}
+        - {x: 7, y: 12}
+        - {x: 2, y: 5}
+        - {x: 7, y: 13}
+        - {x: 12, y: 18}
+        - {x: 13, y: 20}
+        - {x: 6, y: 22}
+        - {x: -12, y: 22}
+        - {x: -23, y: 10}
+        - {x: -24, y: -7}
+        - {x: -24, y: -19}
+        - {x: -21, y: -22}
+        - {x: -11, y: -22}
+        - {x: -5, y: -17}
+        - {x: 10, y: 3}
+        - {x: 10, y: 7}
+        - {x: 10, y: 5}
+      - - {x: 14, y: -20}
+        - {x: 15, y: -21}
+        - {x: 19, y: -21}
+        - {x: 24, y: -18}
+        - {x: 24, y: -9}
+        - {x: 20, y: -8}
+        - {x: 15, y: -8}
+        - {x: 14, y: -9}
     outline: []
   spritePackingTag: 
   userData: 

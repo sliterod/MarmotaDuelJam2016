@@ -30,7 +30,7 @@ public class ColliderEvents : MonoBehaviour {
         if (triggerCollider.tag == "hazard")
         {
             Debug.Log("Hazard! Restarting game");
-            GameObject.Find("Gamestate").SendMessage("ChangeCurrentState", CurrentState.message);
+            GameObject.Find("Gamestate").SendMessage("BottomPit");
         }
 
         if (triggerCollider.tag == "climb")
@@ -48,6 +48,12 @@ public class ColliderEvents : MonoBehaviour {
         {
             Debug.Log("Send message to zoom Out method");
             cameraZoom.ZoomOut();
+        }
+
+        if (triggerCollider.tag == "guillotine")
+        {
+            Debug.Log("Guillotine triggered, activate flash");
+            GameObject.Find("Gamestate").SendMessage("ActivateGuillotine");
         }
     }
 
