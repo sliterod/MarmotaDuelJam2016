@@ -18,7 +18,7 @@ public class MenuButtons : MonoBehaviour {
     public void Easy()
     {
         Debug.Log("Difficulty set to EASY");
-        //loader.GetComponent<SelectRooms>().RandomizeScenes(Difficulty.easy);
+        loader.GetComponent<SelectRooms>().RandomizeScenes(Difficulty.easy);
     }
 
     public void Normal()
@@ -38,7 +38,7 @@ public class MenuButtons : MonoBehaviour {
     }
 
     IEnumerator ExitCoroutine() {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
 
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

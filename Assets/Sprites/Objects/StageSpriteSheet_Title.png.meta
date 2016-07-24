@@ -1,21 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 8c913aeb6dbc40b4c8a4f87c8b349bbc
-timeCreated: 1469388653
-=======
-guid: 66487f13082b00543a72ba8f44e75efd
-<<<<<<< HEAD
-timeCreated: 1469389930
-=======
-timeCreated: 1469386582
->>>>>>> origin/master
->>>>>>> origin/master
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: StageSpriteSheet_Title_0
-    21300002: StageSpriteSheet_Title_1
-    21300004: StageSpriteSheet_Title_2
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,7 +28,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: 0
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -61,111 +47,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: StageSpriteSheet_Title_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 924
-        width: 250
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 120, y: 31}
-        - {x: -24, y: 31}
-        - {x: -30, y: 29}
-        - {x: -30, y: 7}
-        - {x: -26, y: -9}
-        - {x: -11, y: -19}
-        - {x: 106, y: -19}
-        - {x: 113, y: -9}
-        - {x: 125, y: 14}
-        - {x: 125, y: 22}
-      - - {x: -115, y: 33}
-        - {x: -125, y: 27}
-        - {x: -125, y: 1}
-        - {x: -105, y: -11}
-        - {x: -30, y: -11}
-        - {x: -30, y: 20}
-        - {x: -38, y: 33}
-      - - {x: -36, y: 27}
-        - {x: -41, y: 27}
-        - {x: -47, y: 26}
-        - {x: -48, y: 24}
-        - {x: -48, y: 20}
-        - {x: -46, y: 18}
-        - {x: -42, y: 17}
-        - {x: -37, y: 17}
-        - {x: -31, y: 18}
-        - {x: -30, y: 20}
-        - {x: -30, y: 24}
-        - {x: -32, y: 26}
-    - name: StageSpriteSheet_Title_1
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 924
-        width: 250
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 125, y: -23}
-        - {x: 125, y: 24}
-        - {x: -49, y: 24}
-        - {x: -49, y: 3}
-        - {x: -27, y: -16}
-        - {x: 36, y: -26}
-        - {x: 52, y: -26}
-        - {x: 55, y: -23}
-        - {x: 53, y: -20}
-        - {x: 64, y: -23}
-      - - {x: -62, y: 26}
-        - {x: -115, y: 26}
-        - {x: -125, y: 20}
-        - {x: -125, y: 12}
-        - {x: -121, y: 12}
-        - {x: -114, y: -18}
-        - {x: -44, y: -18}
-        - {x: -29, y: -13}
-        - {x: -29, y: -5}
-        - {x: -32, y: -2}
-        - {x: -37, y: 1}
-        - {x: -53, y: 25}
-    - name: StageSpriteSheet_Title_2
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 924
-        width: 250
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 125, y: -23}
-        - {x: 125, y: 24}
-        - {x: -50, y: 24}
-        - {x: -50, y: 15}
-        - {x: -46, y: 8}
-        - {x: -41, y: 7}
-        - {x: -28, y: 9}
-        - {x: -26, y: -11}
-        - {x: -25, y: -15}
-        - {x: 36, y: -26}
-        - {x: 52, y: -26}
-        - {x: 55, y: -23}
-        - {x: 53, y: -20}
-        - {x: 64, y: -23}
-      - - {x: -123, y: 26}
-        - {x: -125, y: 23}
-        - {x: -125, y: -18}
-        - {x: -28, y: -18}
-        - {x: -28, y: 16}
-        - {x: -56, y: 26}
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
