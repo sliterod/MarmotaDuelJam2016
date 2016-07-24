@@ -85,6 +85,12 @@ public class ColliderEvents : MonoBehaviour {
             Animator floorAnimator = GameObject.FindGameObjectWithTag("floorButton").GetComponent<Animator>();
             floorAnimator.SetBool("isPlaying", true);
         }
+
+        if (triggerCollider.tag == "trueDoor")
+        {
+            Debug.Log("Nice, you won");
+            this.GetComponent<CharacterMovement>().IsCharacterMoving = false;
+        }
     }
 
     void OnTriggerExit2D(Collider2D triggerCollider)
@@ -108,10 +114,7 @@ public class ColliderEvents : MonoBehaviour {
             Debug.Log("Game over, try again");
         }
 
-        if (triggerCollider.tag == "trueDoor")
-        {
-            Debug.Log("Nice, you won");
-        }
+        
     }
 
     void OnCollisionEnter2D(Collision2D other)
