@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip death;
 
     AudioSource audioSource;
+    public AudioSource loopAudioSource;
 
     // Use this for initialization
     void Start () {

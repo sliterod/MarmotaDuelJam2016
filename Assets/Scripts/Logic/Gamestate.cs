@@ -30,6 +30,9 @@ public class Gamestate : MonoBehaviour {
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
 
         ChangeCurrentState(CurrentState.ingame);
+
+        //Loop
+        soundManager.loopAudioSource.Play();
     }
 
     void Update() {
