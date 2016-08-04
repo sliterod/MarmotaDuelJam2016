@@ -1,0 +1,15 @@
+NOMBRE (DIFICULTAD)
+-------------------------------------
+TheBigCrack (Hard)
+SkipTheSign (Easy)
+ThreeTorches (Easy)
+FourLevers (Normal)
+BetterBeFast (Normal)
+
+
+PD: Un run del juego deberia tener 5 cuartos (sin contar el del final y el tutorial)
+2 - easy
+2 - normal
+1 - Hard
+
+A ser posible crear un checkpoint al superar el primer cuarto normal.
